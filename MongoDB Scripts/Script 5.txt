@@ -1,0 +1,89 @@
+db.events.insertOne(
+   {
+      "available":26,
+      "collectionURI":"http://gateway.marvel.com/v1/public/characters/1009351/events",
+      "items":[
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/events/116",
+            "name":"Acts of Vengeance!"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/events/303",
+            "name":"Age of X"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/events/296",
+            "name":"Chaos War"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/events/318",
+            "name":"Dark Reign"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/events/297",
+            "name":"Fall of the Hulks"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/events/248",
+            "name":"Fall of the Mutants"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/events/302",
+            "name":"Fear Itself"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/events/251",
+            "name":"House of M"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/events/315",
+            "name":"Infinity"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/events/29",
+            "name":"Infinity War"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/events/317",
+            "name":"Inhumanity"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/events/255",
+            "name":"Initiative"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/events/311",
+            "name":"Marvel NOW!"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/events/37",
+            "name":"Maximum Security"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/events/154",
+            "name":"Onslaught"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/events/319",
+            "name":"Original Sin"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/events/266",
+            "name":"Other - Evolve or Die"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/events/212",
+            "name":"Planet Hulk"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/events/295",
+            "name":"Realm of Kings"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/events/269",
+            "name":"Secret Invasion"
+         }
+      ],
+      "returned":20
+   }
+)
