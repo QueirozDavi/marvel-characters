@@ -1,0 +1,13 @@
+spring:
+  data:
+    mongodb:
+      database: marvel-characters
+      host: localhost
+      port: 27017
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+    application:
+      name: marvel_characters
+
+server:
+  port: 8089
