@@ -16,9 +16,9 @@ public class Stories {
 
     @Id
     private String id;
-    public Integer available;
+    public int available;
     public String collectionURI;
     public List<Item> items;
-    public Integer returned;
+    public int returned;
 
 }

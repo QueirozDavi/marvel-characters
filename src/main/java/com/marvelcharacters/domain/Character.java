@@ -1,5 +1,6 @@
 package com.marvelcharacters.domain;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,6 +20,7 @@ public class Character {
     public String id;
     public String name;
     public String description;
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
     public LocalDateTime modified;
     public Thumbnail thumbnail;
     public String resourceURI;
