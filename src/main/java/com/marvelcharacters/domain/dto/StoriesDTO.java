@@ -1,24 +1,25 @@
-package com.marvelcharacters.domain;
+
+package com.marvelcharacters.domain.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.marvelcharacters.domain.dto.ItemDTO;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@NoArgsConstructor
 @Data
-@Document
-public class Events {
+@NoArgsConstructor
+public class StoriesDTO {
 
+    @JsonProperty("available")
     public Integer available;
+    @JsonProperty("collectionURI")
     public String collectionURI;
-    public List<Item> items = null;
+    @JsonProperty("items")
+    public List<ItemDTO> items = null;
+    @JsonProperty("returned")
     public Integer returned;
+
 }
-
-
