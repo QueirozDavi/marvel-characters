@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -15,10 +16,10 @@ import java.util.List;
 public class Character {
 
     @Id
-    public Integer id;
+    public String id;
     public String name;
     public String description;
-    public String modified;
+    public LocalDateTime modified;
     public Thumbnail thumbnail;
     public String resourceURI;
     public Comics comics;

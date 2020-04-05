@@ -15,7 +15,8 @@ import java.util.List;
 @Document
 public class Events {
 
-    public Integer available;
+
+    private Integer available;
     public String collectionURI;
     public List<Item> items = null;
     public Integer returned;
