@@ -14,7 +14,7 @@ public class EventsBuilder {
         return events;
     }
 
-    public EventsBuilder withStoriesId (String eventsId){
+    public EventsBuilder withEventsId(String eventsId){
         events.setId(eventsId);
         return this;
     }

@@ -15,7 +15,7 @@ public class SeriesBuilder {
         return series;
     }
 
-    public SeriesBuilder withStoriesId (String eventsId){
+    public SeriesBuilder withSeriesId(String eventsId){
         series.setId(eventsId);
         return this;
     }

@@ -1,13 +1,11 @@
 package com.marvelcharacters.config;
 
 
+import com.marvelcharacters.domain.Character;
 import com.marvelcharacters.domain.Comics;
 import com.marvelcharacters.domain.Events;
 import com.marvelcharacters.domain.Stories;
-import com.marvelcharacters.domain.builder.ComicsBuilder;
-import com.marvelcharacters.domain.builder.EventsBuilder;
-import com.marvelcharacters.domain.builder.ItemBuilder;
-import com.marvelcharacters.domain.builder.StoriesBuilder;
+import com.marvelcharacters.domain.builder.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -57,7 +55,7 @@ public class MockFactory {
     public List<Events> getEvents() {
 
         Events e1 = new EventsBuilder()
-                .withStoriesId("oituoiruwepiuypwebvg")
+                .withEventsId("oituoiruwepiuypwebvg")
                 .withAvailable(2222)
                 .withReturned(511)
                 .build();
@@ -68,7 +66,7 @@ public class MockFactory {
         e1.getItems().add(new ItemBuilder().withName("item3").withResourceUri("https://item.com/item3").build());
 
         Events e2 = new EventsBuilder()
-                .withStoriesId("kjhasfdjkhfdsjks")
+                .withEventsId("kjhasfdjkhfdsjks")
                 .withAvailable(4325)
                 .withReturned(11)
                 .build();
@@ -79,7 +77,7 @@ public class MockFactory {
         e2.getItems().add(new ItemBuilder().withName("item6").withResourceUri("https://item.com/item6").build());
 
         Events e3 = new EventsBuilder()
-                .withStoriesId("itruyweriouyiuowyu")
+                .withEventsId("itruyweriouyiuowyu")
                 .withAvailable(5789)
                 .withReturned(10)
                 .build();
@@ -95,7 +93,7 @@ public class MockFactory {
     public List<Comics> getComics() {
 
         Comics c1 = new ComicsBuilder()
-                .withStoriesId("iuyuoweirytuiopewr")
+                .withComicsId("iuyuoweirytuiopewr")
                 .withAvailable(3333)
                 .withReturned(511)
                 .build();
@@ -106,7 +104,7 @@ public class MockFactory {
         c1.getItems().add(new ItemBuilder().withName("item3").withResourceUri("https://item.com/item3").build());
 
         Comics c2 = new ComicsBuilder()
-                .withStoriesId("cderfvbgtyhnmuuoik")
+                .withComicsId("cderfvbgtyhnmuuoik")
                 .withAvailable(1740)
                 .withReturned(14)
                 .build();
@@ -118,6 +116,40 @@ public class MockFactory {
 
         return Arrays.asList(c1, c2);
 
+    }
+
+    public List<Character> getCharacters() {
+        Character ch1 = new CharacterBuilder()
+                .withComics(12, 34)
+                .withEvents(254,66)
+                .withName("Character Test 1")
+                .withDescription("test description")
+                .withUrls()
+                .withId("hfdsgvfdfduiosdkj")
+                .withThumbnail("path", "jpg")
+                .withThumbnail("path", "txt")
+                .withResourceURI("http://rsource.com/test")
+                .withSeries(12, 1574)
+                .withModified()
+                .withStories(55,12)
+                .build();
+
+        Character ch2 = new CharacterBuilder()
+                .withComics(13, 36)
+                .withEvents(567,12)
+                .withName("Character Test 2")
+                .withDescription("test description")
+                .withUrls()
+                .withId("mnvcxbnmcvxbnmxcv254")
+                .withThumbnail("path", "jpg")
+                .withThumbnail("path", "txt")
+                .withResourceURI("http://rsource.com/test")
+                .withSeries(55, 324)
+                .withModified()
+                .withStories(89,3)
+                .build();
+
+        return Arrays.asList(ch1, ch2);
     }
 
 }

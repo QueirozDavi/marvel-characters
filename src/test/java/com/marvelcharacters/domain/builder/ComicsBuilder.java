@@ -14,7 +14,7 @@ public class ComicsBuilder {
         return comics;
     }
 
-    public ComicsBuilder withStoriesId(String storiesId) {
+    public ComicsBuilder withComicsId(String storiesId) {
         comics.setId(storiesId);
         return this;
     }

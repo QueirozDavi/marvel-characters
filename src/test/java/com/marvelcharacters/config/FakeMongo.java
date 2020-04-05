@@ -17,7 +17,7 @@ public class FakeMongo extends AbstractMongoConfiguration {
 
     @Bean
     @Override
-    public MongoClient mongoClient() {
+    public MongoClient mongo() {
         Fongo fongo = new Fongo("mockDB");
         return fongo.getMongo();
     }

@@ -1,9 +1,10 @@
 package com.marvelcharacters.domain.builder;
 
-import com.marvelcharacters.domain.*;
 import com.marvelcharacters.domain.Character;
+import com.marvelcharacters.domain.*;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 
 public class CharacterBuilder {
 
@@ -17,7 +18,7 @@ public class CharacterBuilder {
         return character;
     }
 
-    public CharacterBuilder withStoriesId (String characterId){
+    public CharacterBuilder withId (String characterId){
         character.setId(characterId);
         return this;
     }
@@ -32,8 +33,8 @@ public class CharacterBuilder {
         return this;
     }
 
-    public CharacterBuilder withModified (LocalDateTime modified) {
-        character.setModified(modified);
+    public CharacterBuilder withModified () {
+        character.setModified(LocalDateTime.now());
         return this;
     }
 
@@ -52,7 +53,7 @@ public class CharacterBuilder {
 
     public CharacterBuilder withComics(int available, int returned) {
         Comics comics = new ComicsBuilder()
-                .withStoriesId("iuyuoweirytuiopewr")
+                .withComicsId("iuyuoweirytuiopewr")
                 .withAvailable(available)
                 .withReturned(returned)
                 .build();
@@ -61,22 +62,22 @@ public class CharacterBuilder {
     }
 
     public CharacterBuilder withSeries(int available, int returned) {
-        Series comics = new SeriesBuilder()
-                .withStoriesId("ksahjfgfaksçdjhg")
+        Series series = new SeriesBuilder()
+                .withSeriesId("ksahjfgfaksçdjhg")
                 .withAvailable(available)
                 .withReturned(returned)
                 .build();
-        character.setSeries(comics);
+        character.setSeries(series);
         return this;
     }
 
     public CharacterBuilder withEvents(int available, int returned) {
-        Series comics = new SeriesBuilder()
-                .withStoriesId("9786543289fgbjfdvb")
+        Events events = new EventsBuilder()
+                .withEventsId("9786543289fgbjfdvb")
                 .withAvailable(available)
                 .withReturned(returned)
                 .build();
-        character.setSeries(comics);
+        character.setEvents(events);
         return this;
     }
 
@@ -87,6 +88,17 @@ public class CharacterBuilder {
                 .withReturned(returned)
                 .build();
         character.setStories(stories);
+        return this;
+    }
+
+    public CharacterBuilder withUrls() {
+        Url url = new Url();
+        url.setType("type test");
+        url.setUrl("https://www.test.com");
+
+        character.setUrls(new ArrayList<>());
+        character.getUrls().add(url);
+
         return this;
     }
 }
