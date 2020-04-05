@@ -29,6 +29,7 @@ public class Character {
     public Stories stories;
     public Events events;
     public List<Url> urls;
+    
 }
 
 
