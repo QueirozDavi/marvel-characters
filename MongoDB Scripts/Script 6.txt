@@ -1,0 +1,1 @@
+var firstCharEvents = db.events.findOne({"available":26}) 

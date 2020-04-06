@@ -1,0 +1,1 @@
+var firstCharComics = db.comics.findOne({"available":1657}) 

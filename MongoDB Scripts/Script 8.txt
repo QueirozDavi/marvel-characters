@@ -1,0 +1,1 @@
+var firstCharStories = db.stories.findOne({"available":2541}) 

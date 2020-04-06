@@ -1,0 +1,89 @@
+db.series.insertOne(
+   {
+      "available":470,
+      "collectionURI":"http://gateway.marvel.com/v1/public/characters/1009351/series",
+      "items":[
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/series/15276",
+            "name":"5 Ronin (2011)"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/series/12429",
+            "name":"5 Ronin (2010)"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/series/16450",
+            "name":"A+X (2012 - 2014)"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/series/27632",
+            "name":"Absolute Carnage: Immortal Hulk (2019)"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/series/458",
+            "name":"Actor Presents Spider-Man and the Incredible Hulk (2003)"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/series/13896",
+            "name":"Age of X: Universe (2011)"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/series/7231",
+            "name":"All-New Savage She-Hulk (2009)"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/series/2116",
+            "name":"Alpha Flight (1983 - 1994)"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/series/454",
+            "name":"Amazing Spider-Man (1999 - 2013)"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/series/2984",
+            "name":"Amazing Spider-Man Annual (1964 - 2018)"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/series/13205",
+            "name":"Amazing Spider-Man Annual (2011)"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/series/24323",
+            "name":"Ant-Man and the Wasp Adventures (2018)"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/series/1991",
+            "name":"Avengers (1963 - 1996)"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/series/22547",
+            "name":"Avengers (2016 - 2018)"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/series/3621",
+            "name":"Avengers (1996 - 1997)"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/series/354",
+            "name":"Avengers (1998 - 2004)"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/series/9085",
+            "name":"Avengers (2010 - 2012)"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/series/24044",
+            "name":"Avengers & The Infinity Gauntlet (2018)"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/series/9859",
+            "name":"Avengers & the Infinity Gauntlet (2010)"
+         },
+         {
+            "resourceURI":"http://gateway.marvel.com/v1/public/series/1988",
+            "name":"Avengers Annual (1967 - 1994)"
+         }
+      ],
+      "returned":20
+   }
+)

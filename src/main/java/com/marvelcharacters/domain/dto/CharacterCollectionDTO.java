@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Data
 @NoArgsConstructor
-public class SeriesDTO {
+public class CharacterCollectionDTO {
 
     private String title;
     private String resourceURI;
