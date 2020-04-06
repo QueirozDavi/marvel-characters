@@ -100,4 +100,28 @@ public class CharacterService {
 
         return new PageImpl<>(characterCollectionDTOS, pageable, total);
     }
+
+    public Page<CharacterCollectionDTO> getAllCharacterStories(String characterId, Pageable pageable) {
+        Character character = characterRepository.findById(characterId).orElseThrow(() -> new
+                NotFoundException("Character with id: " + characterId +  "not found."));
+
+        List<CharacterCollectionDTO> characterCollectionDTOS = new ArrayList<>();
+
+        character.getStories().getItems().forEach(i -> characterCollectionDTOS.add(modelMapper.map(i, CharacterCollectionDTO.class)));
+        long total = characterCollectionDTOS.size();
+
+        return new PageImpl<>(characterCollectionDTOS, pageable, total);
+    }
+
+    public Page<CharacterCollectionDTO> getAllCharacterEvents(String characterId, Pageable pageable) {
+        Character character = characterRepository.findById(characterId).orElseThrow(() -> new
+                NotFoundException("Character with id: " + characterId +  "not found."));
+
+        List<CharacterCollectionDTO> characterCollectionDTOS = new ArrayList<>();
+
+        character.getEvents().getItems().forEach(i -> characterCollectionDTOS.add(modelMapper.map(i, CharacterCollectionDTO.class)));
+        long total = characterCollectionDTOS.size();
+
+        return new PageImpl<>(characterCollectionDTOS, pageable, total);
+    }
 }

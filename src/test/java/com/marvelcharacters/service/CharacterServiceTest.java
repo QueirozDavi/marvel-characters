@@ -5,6 +5,7 @@ import com.marvelcharacters.config.FakeMongo;
 import com.marvelcharacters.config.MockFactory;
 import com.marvelcharacters.domain.Character;
 import com.marvelcharacters.domain.builder.CharacterBuilder;
+import com.marvelcharacters.domain.dto.CharacterCollectionDTO;
 import com.marvelcharacters.exception.NotFoundException;
 import com.marvelcharacters.repository.CharacterRepository;
 import org.junit.After;
@@ -13,7 +14,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Import;
@@ -30,6 +33,7 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.mockito.Mockito.when;
 
 @RunWith(SpringRunner.class)
 @Import(value = {FakeMongo.class})
@@ -41,6 +45,9 @@ public class CharacterServiceTest {
     private CharacterService service;
     @Autowired
     private CharacterRepository repository;
+    @Mock
+    @Autowired
+    private ModelMapper modelMapper;
     @Mock
     @Autowired
     private MongoTemplate mongoTemplate;
@@ -215,7 +222,7 @@ public class CharacterServiceTest {
     }
 
     @Test
-    public void shouldGetCharacterByIdWhenPassCorrectId() {
+    public void shouldGetCharacterByIdWhenHasCorrectId() {
 
         Character expectedCharacter = new MockFactory().getCharacters().get(0);
         Character returnedCharacter = service.getCharacterById("hfdsgvfdfduiosdkj");
@@ -228,9 +235,57 @@ public class CharacterServiceTest {
     }
 
     @Test(expected = NotFoundException.class)
-    public void shouldNotGetCharacterByIdWhenPassIncorrectId() {
+    public void shouldNotGetCharacterByIdWhenHasIncorrectId() {
 
         Character expectedCharacter = new MockFactory().getCharacters().get(0);
         Character returnedCharacter = service.getCharacterById("gthyukilop8ij75ftg");
+    }
+
+    @Test
+    public void shouldReturnAllCharacterComicsWhenHasCorrectId() {
+        Page<CharacterCollectionDTO> characterCollectionDTOs =
+                service.getAllCharacterComics("hfdsgvfdfduiosdkj", pageDefault);
+    }
+
+    @Test(expected = NotFoundException.class)
+    public void shouldReturnAllCharacterComicsWhenHasIncorrectId() {
+        Page<CharacterCollectionDTO> characterCollectionDTOs =
+                service.getAllCharacterComics("gfhhgfdhgfdhgfd", pageDefault);
+    }
+
+    @Test
+    public void shouldReturnAllCharacterSeriesWhenHasCorrectId() {
+        Page<CharacterCollectionDTO> characterCollectionDTOs =
+                service.getAllCharacterSeries("hfdsgvfdfduiosdkj", pageDefault);
+    }
+
+    @Test(expected = NotFoundException.class)
+    public void shouldReturnAllCharacterSeriesWhenHasIncorrectId() {
+        Page<CharacterCollectionDTO> characterCollectionDTOs =
+                service.getAllCharacterSeries("gfhhgfdhgfdhgfd", pageDefault);
+    }
+
+    @Test
+    public void shouldReturnAllCharacterStoriesWhenHasCorrectId() {
+        Page<CharacterCollectionDTO> characterCollectionDTOs =
+                service.getAllCharacterStories("hfdsgvfdfduiosdkj", pageDefault);
+    }
+
+    @Test(expected = NotFoundException.class)
+    public void shouldReturnAllCharacterStoriesWhenHasIncorrectId() {
+        Page<CharacterCollectionDTO> characterCollectionDTOs =
+                service.getAllCharacterStories("gfhhgfdhgfdhgfd", pageDefault);
+    }
+
+    @Test
+    public void shouldReturnAllCharacterEventsWhenHasCorrectId() {
+        Page<CharacterCollectionDTO> characterCollectionDTOs =
+                service.getAllCharacterEvents("hfdsgvfdfduiosdkj", pageDefault);
+    }
+
+    @Test(expected = NotFoundException.class)
+    public void shouldReturnAllCharacterEventsWhenHasIncorrectId() {
+        Page<CharacterCollectionDTO> characterCollectionDTOs =
+                service.getAllCharacterEvents("gfhhgfdhgfdhgfd", pageDefault);
     }
 }

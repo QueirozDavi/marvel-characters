@@ -48,4 +48,14 @@ public class CharacterController {
     public Page<CharacterCollectionDTO> getCharacterSeries(@PathVariable String id, Pageable pageable){
         return service.getAllCharacterSeries(id, pageable);
     }
+
+    @GetMapping("/{id}/stories")
+    public Page<CharacterCollectionDTO> getCharacterStories(@PathVariable String id, Pageable pageable){
+        return service.getAllCharacterStories(id, pageable);
+    }
+
+    @GetMapping("/{id}/events")
+    public Page<CharacterCollectionDTO> getCharacterEvents(@PathVariable String id, Pageable pageable){
+        return service.getAllCharacterEvents(id, pageable);
+    }
 }

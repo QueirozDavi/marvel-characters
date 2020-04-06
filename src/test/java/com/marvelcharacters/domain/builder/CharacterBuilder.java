@@ -56,6 +56,7 @@ public class CharacterBuilder {
                 .withComicsId("iuyuoweirytuiopewr")
                 .withAvailable(available)
                 .withReturned(returned)
+                .withItems()
                 .build();
         character.setComics(comics);
         return this;
@@ -66,6 +67,7 @@ public class CharacterBuilder {
                 .withSeriesId("ksahjfgfaksçdjhg")
                 .withAvailable(available)
                 .withReturned(returned)
+                .withItems()
                 .build();
         character.setSeries(series);
         return this;
@@ -76,6 +78,7 @@ public class CharacterBuilder {
                 .withEventsId("9786543289fgbjfdvb")
                 .withAvailable(available)
                 .withReturned(returned)
+                .withItems()
                 .build();
         character.setEvents(events);
         return this;
@@ -86,6 +89,7 @@ public class CharacterBuilder {
                 .withStoriesId("jsfhg764367jsfbjfsbsjf")
                 .withAvailable(available)
                 .withReturned(returned)
+                .withItems()
                 .build();
         character.setStories(stories);
         return this;
