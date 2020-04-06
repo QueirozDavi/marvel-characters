@@ -16,6 +16,6 @@ public class Comics {
     private String id;
     public Integer available;
     public String collectionURI;
-    public List<Item> items = null;
+    public List<Item> items;
     public Integer returned;
 }

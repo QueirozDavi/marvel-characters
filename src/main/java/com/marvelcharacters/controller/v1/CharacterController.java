@@ -1,6 +1,7 @@
 package com.marvelcharacters.controller.v1;
 
 import com.marvelcharacters.domain.Character;
+import com.marvelcharacters.domain.dto.CharacterCollectionDTO;
 import com.marvelcharacters.service.CharacterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -36,5 +37,15 @@ public class CharacterController {
     @GetMapping("/{id}")
     public Character getCharacterById(@PathVariable String id){
         return service.getCharacterById(id);
+    }
+
+    @GetMapping("/{id}/comics")
+    public Page<CharacterCollectionDTO> getCharacterComics(@PathVariable String id, Pageable pageable){
+        return service.getAllCharacterComics(id, pageable);
+    }
+
+    @GetMapping("/{id}/series")
+    public Page<CharacterCollectionDTO> getCharacterSeries(@PathVariable String id, Pageable pageable){
+        return service.getAllCharacterSeries(id, pageable);
     }
 }
