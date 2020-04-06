@@ -69,8 +69,7 @@ public class CharacterServiceTest {
     @Test
     public void shouldFindAllCharactersWhenHasNoParameter() {
 
-        Page<Character> characters = service.getCharacters(null, null, null, null,
-                null, pageDefault);
+        Page<Character> characters = service.getCharacters(null, pageDefault);
         List<Character> contents = characters.getContent();
 
         assertNotNull(contents);
@@ -83,8 +82,7 @@ public class CharacterServiceTest {
     @Test
     public void shouldFindAllCharactersWhenHasNameParameter() {
 
-        Page<Character> characters = service.getCharacters("Test 1", null, null, null,
-                null, pageDefault);
+        Page<Character> characters = service.getCharacters("Test 1", pageDefault);
         List<Character> contents = characters.getContent();
 
         assertNotNull(contents);
@@ -97,8 +95,7 @@ public class CharacterServiceTest {
     @Test
     public void shouldNotFindAllCharactersWhenHasIncorrectNameParameter() {
 
-        Page<Character> characters = service.getCharacters("XPTO", null, null, null,
-                null, pageDefault);
+        Page<Character> characters = service.getCharacters("XPTO", pageDefault);
         List<Character> contents = characters.getContent();
 
         assertNotNull(contents);
