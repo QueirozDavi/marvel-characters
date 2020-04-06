@@ -16,11 +16,6 @@ public class StoriesBuilder {
         return stories;
     }
 
-    public StoriesBuilder withStoriesId (String storiesId){
-        stories.setId(storiesId);
-        return this;
-    }
-
     public StoriesBuilder withReturned (int returned) {
         stories.setReturned(returned);
         return this;

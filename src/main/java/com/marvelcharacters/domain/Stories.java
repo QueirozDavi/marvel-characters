@@ -3,7 +3,6 @@ package com.marvelcharacters.domain;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
 
 import java.util.List;
 
@@ -12,8 +11,6 @@ import java.util.List;
 @NoArgsConstructor
 public class Stories {
 
-    @Id
-    private String id;
     public int available;
     public String collectionURI;
     public List<Item> items;

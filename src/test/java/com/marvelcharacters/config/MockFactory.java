@@ -16,7 +16,6 @@ public class MockFactory {
     public List<Stories> getStories() {
 
         Stories s1 = new StoriesBuilder()
-                .withStoriesId("asdfghjkl23456f")
                 .withAvailable(1478)
                 .withReturned(20)
                 .build();
@@ -27,7 +26,6 @@ public class MockFactory {
         s1.getItems().add(new ItemBuilder().withName("item3").withResourceUri("https://item.com/item3").build());
 
         Stories s2 = new StoriesBuilder()
-                .withStoriesId("nbguyasdkdvu")
                 .withAvailable(1111)
                 .withReturned(15)
                 .build();
@@ -38,7 +36,6 @@ public class MockFactory {
         s2.getItems().add(new ItemBuilder().withName("item6").withResourceUri("https://item.com/item6").build());
 
         Stories s3 = new StoriesBuilder()
-                .withStoriesId("nbguyasdkdvu")
                 .withAvailable(557)
                 .withReturned(15)
                 .build();
@@ -55,7 +52,6 @@ public class MockFactory {
     public List<Events> getEvents() {
 
         Events e1 = new EventsBuilder()
-                .withEventsId("oituoiruwepiuypwebvg")
                 .withAvailable(2222)
                 .withReturned(511)
                 .build();
@@ -66,7 +62,6 @@ public class MockFactory {
         e1.getItems().add(new ItemBuilder().withName("item3").withResourceUri("https://item.com/item3").build());
 
         Events e2 = new EventsBuilder()
-                .withEventsId("kjhasfdjkhfdsjks")
                 .withAvailable(4325)
                 .withReturned(11)
                 .build();
@@ -77,7 +72,6 @@ public class MockFactory {
         e2.getItems().add(new ItemBuilder().withName("item6").withResourceUri("https://item.com/item6").build());
 
         Events e3 = new EventsBuilder()
-                .withEventsId("itruyweriouyiuowyu")
                 .withAvailable(5789)
                 .withReturned(10)
                 .build();
@@ -93,7 +87,6 @@ public class MockFactory {
     public List<Comics> getComics() {
 
         Comics c1 = new ComicsBuilder()
-                .withComicsId("iuyuoweirytuiopewr")
                 .withAvailable(3333)
                 .withReturned(511)
                 .build();
@@ -104,7 +97,6 @@ public class MockFactory {
         c1.getItems().add(new ItemBuilder().withName("item3").withResourceUri("https://item.com/item3").build());
 
         Comics c2 = new ComicsBuilder()
-                .withComicsId("cderfvbgtyhnmuuoik")
                 .withAvailable(1740)
                 .withReturned(14)
                 .build();

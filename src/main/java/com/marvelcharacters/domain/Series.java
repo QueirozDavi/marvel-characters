@@ -12,8 +12,6 @@ import java.util.List;
 @NoArgsConstructor
 public class Series {
 
-    @Id
-    private String id;
     public Integer available;
     public String collectionURI;
     public List<Item> items;

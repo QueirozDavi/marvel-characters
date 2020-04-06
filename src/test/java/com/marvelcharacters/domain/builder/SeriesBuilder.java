@@ -17,11 +17,6 @@ public class SeriesBuilder {
         return series;
     }
 
-    public SeriesBuilder withSeriesId(String seriesId){
-        series.setId(seriesId);
-        return this;
-    }
-
     public SeriesBuilder withReturned (int returned) {
         series.setReturned(returned);
         return this;

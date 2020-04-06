@@ -16,11 +16,6 @@ public class EventsBuilder {
         return events;
     }
 
-    public EventsBuilder withEventsId(String eventsId){
-        events.setId(eventsId);
-        return this;
-    }
-
     public EventsBuilder withReturned (int returned) {
         events.setReturned(returned);
         return this;

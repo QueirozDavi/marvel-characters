@@ -16,11 +16,6 @@ public class ComicsBuilder {
         return comics;
     }
 
-    public ComicsBuilder withComicsId(String storiesId) {
-        comics.setId(storiesId);
-        return this;
-    }
-
     public ComicsBuilder withReturned(int returned) {
         comics.setReturned(returned);
         return this;

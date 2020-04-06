@@ -53,7 +53,6 @@ public class CharacterBuilder {
 
     public CharacterBuilder withComics(int available, int returned) {
         Comics comics = new ComicsBuilder()
-                .withComicsId("iuyuoweirytuiopewr")
                 .withAvailable(available)
                 .withReturned(returned)
                 .withItems()
@@ -64,7 +63,6 @@ public class CharacterBuilder {
 
     public CharacterBuilder withSeries(int available, int returned) {
         Series series = new SeriesBuilder()
-                .withSeriesId("ksahjfgfaksçdjhg")
                 .withAvailable(available)
                 .withReturned(returned)
                 .withItems()
@@ -75,7 +73,6 @@ public class CharacterBuilder {
 
     public CharacterBuilder withEvents(int available, int returned) {
         Events events = new EventsBuilder()
-                .withEventsId("9786543289fgbjfdvb")
                 .withAvailable(available)
                 .withReturned(returned)
                 .withItems()
@@ -86,7 +83,6 @@ public class CharacterBuilder {
 
     public CharacterBuilder withStories(int available, int returned) {
         Stories stories = new StoriesBuilder()
-                .withStoriesId("jsfhg764367jsfbjfsbsjf")
                 .withAvailable(available)
                 .withReturned(returned)
                 .withItems()
