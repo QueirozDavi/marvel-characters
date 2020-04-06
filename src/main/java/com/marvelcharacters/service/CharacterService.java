@@ -35,12 +35,11 @@ public class CharacterService {
         this.modelMapper = modelMapper;
     }
 
-    public Page<Character> getCharacters(String name, List<String> comicsIds, List<String> seriesIds,
-                                         List<String> eventsIds, List<String> storiesIds, Pageable pageable) throws NotFoundException {
+    public Page<Character> getCharacters(String name, Pageable pageable)  {
 
         Query query = new Query();
 
-        createCharactersCriteria(name, seriesIds, eventsIds, storiesIds, comicsIds, query);
+        createCharactersCriteria(name, query);
 
         long total = mongoTemplate.count(query, Character.class);
         query.with(pageable);
@@ -54,26 +53,9 @@ public class CharacterService {
                 " not found."));
     }
 
-    private void createCharactersCriteria(String name, List<String> seriesIds, List<String> eventsIds,
-                                          List<String> storiesIds, List<String> comicsIds, Query query) {
+    private void createCharactersCriteria(String name, Query query) {
         if (!Strings.isNullOrEmpty(name)) {
             query.addCriteria(where("name").regex(name, "i"));
-        }
-
-        if (!CollectionUtils.isEmpty(seriesIds)) {
-            query.addCriteria(where("series.id").in(seriesIds));
-        }
-
-        if (!CollectionUtils.isEmpty(eventsIds)) {
-            query.addCriteria(where("events.id").in(eventsIds));
-        }
-
-        if (!CollectionUtils.isEmpty(storiesIds)) {
-            query.addCriteria(where("stories.id").in(storiesIds));
-        }
-
-        if (!CollectionUtils.isEmpty(comicsIds)) {
-            query.addCriteria(where("comics.id").in(comicsIds));
         }
     }
 

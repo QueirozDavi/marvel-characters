@@ -25,13 +25,9 @@ public class CharacterController {
     @GetMapping
     public Page<Character> getCharacters(
             @RequestParam(value = "name", required = false, defaultValue = "") String name,
-            @RequestParam(value = "comicsIds", required = false, defaultValue = "") List<String> comicsIds,
-            @RequestParam(value = "seriesIds", required = false, defaultValue = "") List<String> seriesIds,
-            @RequestParam(value = "eventsIds", required = false, defaultValue = "") List<String> eventsIds,
-            @RequestParam(value = "storiesIds", required = false, defaultValue = "") List<String> storiesId,
             Pageable pageable) {
 
-            return service.getCharacters(name, comicsIds, seriesIds, eventsIds, storiesId, pageable);
+            return service.getCharacters(name, pageable);
     }
 
     @GetMapping("/{id}")
